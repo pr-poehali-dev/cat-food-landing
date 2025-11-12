@@ -278,7 +278,107 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4 bg-muted">
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4">Научный подход к питанию</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Наши корма разработаны совместно с ветеринарами и диетологами
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Microscope" size={24} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Лабораторный контроль</h3>
+                <p className="text-muted-foreground">
+                  Каждая партия проходит строгий контроль качества в собственной лаборатории. 
+                  Мы проверяем состав, безопасность и питательную ценность.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Users" size={24} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Команда экспертов</h3>
+                <p className="text-muted-foreground">
+                  В разработке рецептур участвуют ветеринарные диетологи с опытом более 15 лет. 
+                  Мы учитываем все потребности кошек разных пород и возрастов.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="FileCheck" size={24} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Сертификация</h3>
+                <p className="text-muted-foreground">
+                  Продукция сертифицирована по международным стандартам ISO 22000 и HACCP. 
+                  Соответствуем всем требованиям РФ для кормов премиум-класса.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-muted">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge className="mb-4">🎁 Специальное предложение</Badge>
+              <h2 className="text-4xl font-bold mb-6">Программа лояльности для постоянных клиентов</h2>
+              <div className="space-y-4">
+                <div className="flex gap-3">
+                  <Icon name="Check" className="text-secondary flex-shrink-0 mt-1" size={20} />
+                  <div>
+                    <h4 className="font-bold mb-1">Скидка 10% на второй заказ</h4>
+                    <p className="text-sm text-muted-foreground">Дарим приятный бонус новым клиентам</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <Icon name="Check" className="text-secondary flex-shrink-0 mt-1" size={20} />
+                  <div>
+                    <h4 className="font-bold mb-1">Бесплатная доставка от 3000₽</h4>
+                    <p className="text-sm text-muted-foreground">Экономьте на доставке при крупных заказах</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <Icon name="Check" className="text-secondary flex-shrink-0 mt-1" size={20} />
+                  <div>
+                    <h4 className="font-bold mb-1">Накопительная система баллов</h4>
+                    <p className="text-sm text-muted-foreground">1 балл за каждые 100₽ покупки. Оплачивайте баллами до 30% заказа</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <Icon name="Check" className="text-secondary flex-shrink-0 mt-1" size={20} />
+                  <div>
+                    <h4 className="font-bold mb-1">Подарки в каждом заказе</h4>
+                    <p className="text-sm text-muted-foreground">Пробники новых вкусов и полезные лакомства</p>
+                  </div>
+                </div>
+              </div>
+              <Button size="lg" className="mt-6" onClick={() => scrollToSection('catalog')}>
+                Присоединиться к программе
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="aspect-square bg-gradient-to-br from-accent to-secondary rounded-2xl p-8 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <Icon name="Gift" size={80} className="mx-auto mb-4" />
+                  <h3 className="text-3xl font-bold mb-2">До 30%</h3>
+                  <p className="text-xl">экономии для постоянных клиентов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4">Отзывы наших клиентов</h2>
           <p className="text-center text-muted-foreground mb-12">
@@ -299,19 +399,131 @@ const Index = () => {
               </Card>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center gap-8 bg-card p-6 rounded-xl border">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-1">5000+</div>
+                <div className="text-sm text-muted-foreground">Довольных клиентов</div>
+              </div>
+              <div className="h-12 w-px bg-border" />
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-1">4.9/5</div>
+                <div className="text-sm text-muted-foreground">Средняя оценка</div>
+              </div>
+              <div className="h-12 w-px bg-border" />
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-1">98%</div>
+                <div className="text-sm text-muted-foreground">Повторных покупок</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="catalog" className="py-20 px-4 bg-primary text-primary-foreground">
-        <div className="container mx-auto text-center max-w-3xl">
-          <h2 className="text-4xl font-bold mb-6">Готовы позаботиться о своем питомце?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Перейдите в наш каталог и выберите идеальный корм для вашей кошки
+      <section className="py-20 px-4 bg-muted">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-4">Часто задаваемые вопросы</h2>
+          <p className="text-center text-muted-foreground mb-12">
+            Ответы на популярные вопросы о наших кормах
           </p>
-          <Button size="lg" variant="secondary">
-            Открыть каталог
-            <Icon name="ShoppingCart" size={20} className="ml-2" />
-          </Button>
+          <div className="space-y-4">
+            {faq.map((item, index) => (
+              <Card key={index}>
+                <CardContent className="pt-6">
+                  <h3 className="font-bold text-lg mb-2 flex items-start gap-2">
+                    <Icon name="HelpCircle" size={20} className="text-primary flex-shrink-0 mt-1" />
+                    {item.question}
+                  </h3>
+                  <p className="text-muted-foreground ml-7">{item.answer}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Здоровье вашего питомца — наша миссия</h2>
+              <p className="text-xl mb-6 opacity-90">
+                Мы производим корма с 2015 года и помогли более 5000 кошек стать здоровее и счастливее
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3">
+                  <Icon name="Check" size={20} className="flex-shrink-0" />
+                  <span>Натуральные ингредиенты без химии</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Icon name="Check" size={20} className="flex-shrink-0" />
+                  <span>Разработано ветеринарами</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Icon name="Check" size={20} className="flex-shrink-0" />
+                  <span>Доставка по всей России</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">🎉 Акция для новых клиентов</h3>
+              <div className="bg-white text-foreground rounded-xl p-6 mb-4">
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-primary mb-2">-15%</div>
+                  <p className="text-lg font-semibold mb-1">На первый заказ</p>
+                  <p className="text-sm text-muted-foreground">Промокод: ECOSTART</p>
+                </div>
+              </div>
+              <Button size="lg" variant="secondary" className="w-full">
+                Открыть каталог
+                <Icon name="ShoppingCart" size={20} className="ml-2" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" className="py-20 px-4 bg-muted">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4">Как сделать заказ</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Простой процесс заказа за 3 шага
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-2">Выберите корм</h3>
+              <p className="text-muted-foreground">
+                Определитесь с вкусом и объемом упаковки в нашем каталоге
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-2">Оформите заказ</h3>
+              <p className="text-muted-foreground">
+                Укажите адрес доставки и выберите удобный способ оплаты
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-2">Получите корм</h3>
+              <p className="text-muted-foreground">
+                Доставка курьером или в пункт выдачи за 2-5 дней
+              </p>
+            </div>
+          </div>
+          <div className="text-center mt-12">
+            <Button size="lg" onClick={() => scrollToSection('contacts')}>
+              Начать покупки
+              <Icon name="ArrowRight" size={20} className="ml-2" />
+            </Button>
+          </div>
         </div>
       </section>
 
